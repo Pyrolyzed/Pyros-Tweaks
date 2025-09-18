@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#",
+        "WSW",
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:dirt"
+        },
+        "W": {
+            "item": "minecraft:wheat_seeds"
+        },
+        "S": {
+            "item": "minecraft:stone_hoe"
+        }
+    },
+    "result": {
+        "id": "pyrostweaks:grass_remover",
+        "count": 1        
+    }
+}
