@@ -9,9 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.pyrolyzed.tweaks.grassremover.RemoverItem;
 import net.pyrolyzed.tweaks.items.ModItems;
 
 
@@ -21,7 +19,6 @@ public class Main {
     public static final Logger LOGGER = LogUtils.getLogger();
     
     public Main(IEventBus modEventBus, ModContainer modContainer) {
-        NeoForge.EVENT_BUS.register(RemoverItem.class);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         ModItems.register(modEventBus);
         modEventBus.addListener(this::addCreative);
