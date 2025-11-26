@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.pyrolyzed.tweaks.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FarmlandTweak",
+    "EggTweak"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

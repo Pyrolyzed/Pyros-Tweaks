@@ -9,8 +9,10 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.pyrolyzed.tweaks.items.ModItems;
+import net.pyrolyzed.tweaks.spawncaptweak.SpawnCapTweakEvents;
 
 
 @Mod(Main.MODID)
@@ -21,6 +23,7 @@ public class Main {
     public Main(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         ModItems.register(modEventBus);
+        NeoForge.EVENT_BUS.register(new SpawnCapTweakEvents());
         modEventBus.addListener(this::addCreative);
     }
 
